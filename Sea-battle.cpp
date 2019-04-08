@@ -1,6 +1,5 @@
 //Игра морской бой. Выполнили: Фролов Д.В. , Бардин В.С. . Версия 1.0
 
-#include "pch.h"
 #include <iostream>
 #include <winsock2.h>
 #pragma comment(lib, "ws2_32.lib")
