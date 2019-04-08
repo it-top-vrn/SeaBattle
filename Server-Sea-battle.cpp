@@ -61,7 +61,7 @@ int main()
 	WSAData wsaData;
 	WORD DLLVersion = MAKEWORD(2, 1);
 	if (WSAStartup(DLLVersion, &wsaData) != 0) {
-		std::cout << "Error" << std::endl;
+		cout << "Error" << endl;
 		exit(1);
 	}
 
@@ -79,7 +79,7 @@ int main()
 
 	if (newConnection == 0)
 	{
-		std::cout << "Error #2\n";
+		cout << "Error #2\n";
 	}
 	do
 	{
@@ -103,214 +103,214 @@ void showEmptyField(int numberArray)
 	{
 	case 1:
 		system("cls");
-		std::cout << '\t' << "Our playing field:" << endl;
+		cout << '\t' << "Our playing field:" << endl;
 		for (int i = 0; i < 13; i++)//верхние координаты 1-10
 		{
 			if (i == 0 || i == 1 || i == 2)
 			{
-				std::cout << ' ';
+				cout << ' ';
 				continue;
 			}
-			std::cout << i - 2;
+			cout << i - 2;
 		}
-		std::cout << endl;
-		std::cout << ' ' << ' ' << (char)201;
+		cout << endl;
+		cout << ' ' << ' ' << (char)201;
 		for (int i = 0; i < 10; i++)// псевдографика верхней границы
 		{
-			std::cout << (char)205;
+			cout << (char)205;
 		}
-		std::cout << (char)187 << endl;
+		cout << (char)187 << endl;
 		for (int i = 1; i < 10; i++)
 		{
 			for (int j = 0; j < 14; j++)
 			{
 				if (j == 0)
 				{
-					std::cout << i;
+					cout << i;
 				}
 				else if (j == 1)
 				{
-					std::cout << ' ';
+					cout << ' ';
 				}
 				else if (j == 2)
 				{
-					std::cout << (char)186;
+					cout << (char)186;
 				}
 				else if (j == 13)
 				{
-					std::cout << (char)186;
+					cout << (char)186;
 				}
 				else if (fieldPlayer[i - 1][j - 3] == 1)
 				{
-					std::cout << (char)219;
+					cout << (char)219;
 				}
 				else if (fieldPlayer[i - 1][j - 3] == 0)
 				{
-					std::cout << ' ';
+					cout << ' ';
 				}
 				else if (fieldPlayer[i - 1][j - 3] == 2)
 				{
-					std::cout << (char)42;
+					cout << (char)42;
 				}
 				else if (fieldPlayer[i - 1][j - 3] == 3)
 				{
-					std::cout << (char)176;
+					cout << (char)176;
 				}
 				else if (fieldPlayer[i - 1][j - 3] == 4)
 				{
-					std::cout << (char)88;
+					cout << (char)88;
 				}
 			}
-			std::cout << endl;
+			cout << endl;
 		}
 		for (int i = 0; i < 14; i++)
 		{
 			if (i == 0)
 			{
-				std::cout << 1;
+				cout << 1;
 			}
 			else if (i == 1)
 			{
-				std::cout << 0;
+				cout << 0;
 			}
 			else if (i == 2)
 			{
-				std::cout << (char)186;
+				cout << (char)186;
 			}
 			else if (i == 13)
 			{
-				std::cout << (char)186;
+				cout << (char)186;
 			}
 			else if (fieldPlayer[9][i - 3] == 1)
 			{
-				std::cout << (char)219;
+				cout << (char)219;
 			}
 			else if (fieldPlayer[9][i - 3] == 0)
 			{
-				std::cout << ' ';
+				cout << ' ';
 			}
 			else if (fieldPlayer[9][i - 3] == 2)
 			{
-				std::cout << (char)42;
+				cout << (char)42;
 			}
 			else if (fieldPlayer[9][i - 3] == 3)
 			{
-				std::cout << (char)176;
+				cout << (char)176;
 			}
 			else if (fieldPlayer[9][i - 3] == 4)
 			{
-				std::cout << (char)88;
+				cout << (char)88;
 			}
 		}
 		break;
 	case 2:
-		std::cout << "Opponent's playing field:" << endl;
+		cout << "Opponent's playing field:" << endl;
 		for (int i = 0; i < 13; i++)//верхние координаты 1-10
 		{
 			if (i == 0 || i == 1 || i == 2)
 			{
-				std::cout << ' ';
+				cout << ' ';
 				continue;
 			}
-			std::cout << i - 2;
+			cout << i - 2;
 		}
-		std::cout << endl;
-		std::cout << ' ' << ' ' << (char)201;
+		cout << endl;
+		cout << ' ' << ' ' << (char)201;
 		for (int i = 0; i < 10; i++)// псевдографика верхней границы
 		{
-			std::cout << (char)205;
+			cout << (char)205;
 		}
-		std::cout << (char)187 << endl;
+		cout << (char)187 << endl;
 		for (int i = 1; i < 10; i++)
 		{
 			for (int j = 0; j < 14; j++)
 			{
 				if (j == 0)
 				{
-					std::cout << i;
+					cout << i;
 				}
 				else if (j == 1)
 				{
-					std::cout << ' ';
+					cout << ' ';
 				}
 				else if (j == 2)
 				{
-					std::cout << (char)186;
+					cout << (char)186;
 				}
 				else if (j == 13)
 				{
-					std::cout << (char)186;
+					cout << (char)186;
 				}
 				else if (fieldComp[i - 1][j - 3] == 1)
 				{
-					std::cout << (char)219;
+					cout << (char)219;
 				}
 				else if (fieldComp[i - 1][j - 3] == 0)
 				{
-					std::cout << ' ';
+					cout << ' ';
 				}
 				else if (fieldComp[i - 1][j - 3] == 2)
 				{
-					std::cout << (char)42;
+					cout << (char)42;
 				}
 				else if (fieldComp[i - 1][j - 3] == 3)
 				{
-					std::cout << (char)176;
+					cout << (char)176;
 				}
 				else if (fieldComp[i - 1][j - 3] == 4)
 				{
-					std::cout << (char)88;
+					cout << (char)88;
 				}
 			}
-			std::cout << endl;
+			cout << endl;
 		}
 		for (int i = 0; i < 14; i++)
 		{
 			if (i == 0)
 			{
-				std::cout << 1;
+				cout << 1;
 			}
 			else if (i == 1)
 			{
-				std::cout << 0;
+				cout << 0;
 			}
 			else if (i == 2)
 			{
-				std::cout << (char)186;
+				cout << (char)186;
 			}
 			else if (i == 13)
 			{
-				std::cout << (char)186;
+				cout << (char)186;
 			}
 			else if (fieldComp[9][i - 3] == 1)
 			{
-				std::cout << (char)219;
+				cout << (char)219;
 			}
 			else if (fieldComp[9][i - 3] == 0)
 			{
-				std::cout << ' ';
+				cout << ' ';
 			}
 			else if (fieldComp[9][i - 3] == 2)
 			{
-				std::cout << (char)42;
+				cout << (char)42;
 			}
 			else if (fieldComp[9][i - 3] == 3)
 			{
-				std::cout << (char)176;
+				cout << (char)176;
 			}
 			else if (fieldComp[9][i - 3] == 4)
 			{
-				std::cout << (char)88;
+				cout << (char)88;
 			}
 		}
 	}
-	std::cout << endl;
-	std::cout << ' ' << ' ' << (char)200;
+	cout << endl;
+	cout << ' ' << ' ' << (char)200;
 	for (int i = 0; i < 10; i++)// псевдографика нижней границы
 	{
-		std::cout << (char)205;
+		cout << (char)205;
 	}
-	std::cout << (char)188 << endl;
+	cout << (char)188 << endl;
 }
 
 void enterLinkor()
